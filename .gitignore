@@ -1,1 +1,25 @@
+# Databricks
+.databricks/
+*.db
+*.log
 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Credenciais (NUNCA versionar)
+*.token
+secrets.json
+config.json
+.env*
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
