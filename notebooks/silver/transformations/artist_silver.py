@@ -6,9 +6,7 @@ from pyspark.sql import functions as F
     comment="Silver layer - Artist com tipos corretos"
 )
 def silver_artist():
-    return spark.read \
-        .format("delta") \
-        .table("projeto_engenharia.bronze.artist") \
+    return dlt.read( "bronze.artist") \
         .select(
             F.col("ArtistId").cast("int").alias("artist_id"),
             F.coalesce(F.trim(F.col("Name")), F.lit("Desconhecido")).alias("artist_nome"),
