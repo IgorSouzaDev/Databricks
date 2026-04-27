@@ -2,7 +2,7 @@ import dlt
 from pyspark.sql import functions as F
 
 @dlt.table(
-    name="artist_silver",
+    name="silver_artist",
     comment="Silver layer - Artist com tipos corretos"
 )
 def silver_artist():

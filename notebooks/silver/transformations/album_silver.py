@@ -14,4 +14,4 @@ def silver_album():
             F.trim(F.col("Title")).alias("album_nome"),
             F.col("ArtistId").cast("int").alias("artist_id"),
             F.current_timestamp().alias("silver_processed_at")
-        )
+        ).filter(F.col("AlbumId").isNotNull())
